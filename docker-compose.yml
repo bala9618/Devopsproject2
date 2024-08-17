@@ -4,9 +4,9 @@ services:
     image: postgres:14
     container_name: postgres_db
     environment:
-      POSTGRES_DB: mydatabase
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: db
+      POSTGRES_USER: bala1
+      POSTGRES_PASSWORD: bala123
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
@@ -22,9 +22,9 @@ services:
     depends_on:
       - db
     environment:
-      - DJANGO_DB_NAME=mydatabase
-      - DJANGO_DB_USER=myuser
-      - DJANGO_DB_PASSWORD=mypassword
+      - DJANGO_DB_NAME=bala
+      - DJANGO_DB_USER=bala1
+      - DJANGO_DB_PASSWORD=bala123
     networks:
       - app_network
 
